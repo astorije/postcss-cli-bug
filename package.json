@@ -1,0 +1,21 @@
+{
+  "name": "postcss-cli-bug",
+  "description": "Test case repository to reproduce https://github.com/postcss/postcss-cli/issues/199",
+  "private": "true",
+  "scripts": {
+    "build:fail": "node-sass src/index.scss | postcss --use autoprefixer --output dist/fail.css",
+    "build:succeed1": "node-sass src/index.scss /tmp/index.css && postcss /tmp/index.css --use autoprefixer --output dist/succeed1.css",
+    "build:succeed2": "node-sass src/index.scss | postcss --output dist/succeed2.css"
+  },
+  "author": {
+    "name": "Jérémie Astori",
+    "url": "https://jeremie.astori.fr"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "8.6.2",
+    "bootstrap": "4.1.1",
+    "node-sass": "4.9.0",
+    "postcss-cli": "5.0.0"
+  }
+}
